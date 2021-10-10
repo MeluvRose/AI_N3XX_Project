@@ -107,7 +107,7 @@ def crawlingPosts(names):
             else:
                 thumb_count = 0
             # 성의 없거나, 광고일 것 같은 글 제외
-            if (thumb_count < 3) & (thumb_count > 10):
+            if (thumb_count < 6) | (thumb_count > 19):
                 continue;
             lst_posts.append({"date":date, "title":title,
                 "shorts":short, "thumb_count":thumb_count, "name":n})
