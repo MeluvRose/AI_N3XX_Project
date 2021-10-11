@@ -8,7 +8,7 @@ from flask import Blueprint, render_template
 from flask import request, redirect, url_for
 
 user_bp = Blueprint('user', __name__)
-DB_FILEPATH = os.path.join(os.getcwd(), 'project_submit/data/Sools.db')
+DB_FILEPATH = os.path.join(os.getcwd(), __name__,'data/Sools.db')
 connect = sqlite3.connect(DB_FILEPATH, check_same_thread=False)
 cursor = connect.cursor()
 model = joblib.load('project_submit/sools.pkl')
