@@ -1,1 +1,1 @@
-web: gunicorn --workers=2 'soo-wul-han-jan:create_app()'
+web: gunicorn --workers=2 '<<project_submit>>:create_app()'
