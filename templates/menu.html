@@ -1,16 +1,11 @@
 {% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
 <div class="content">
-  <h2>[{{name}}] 어서 오세요...오늘은...술 한잔...어떠신가요...?</h2>
-  {% for x in content %}
-  <p>{{x}}</p>
-  {% if x == 'a' %}
-  <p>어서오세요...</p>
-  {% else %}
-  <p>어서와~~</p>
-  {% endif %} {% endfor %}
-  <form action="/" method="POST">
-    <input type="text" name="content" id="content" />
-    <input type="submit" value="Add Task" />
-  </form>
+  <h2>[{{user}}]님 어서 오세요...오늘은...술 한잔...어떠신가요...?</h2>
+  <a class="btn btn-primary" href="/{{user}}/Sools/entire" role="button"
+    >우리 술 찾기</a
+  >
+  <a class="btn btn-primary" href="/{{user}}/Sools/taste" role="button"
+    >우리 술 추천받기</a
+  >
 </div>
 {% endblock %}

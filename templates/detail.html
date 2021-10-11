@@ -1,21 +1,35 @@
 {% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
-<div class="content">
-  <h1>오늘밤은 이 술과 함께 하지 않을래요...?</h1>
-  <table>
-    <tr>
-      <td>{{ num }}</td>
-      <td>{{ species }}</td>
-      <td>
-        <a href="">delete</a>
-        <br />
-        <a href="">updete</a>
-        <br />
-      </td>
-    </tr>
-  </table>
-  <form action="/" method="POST">
-    <input type="text" name="content" id="content" />
-    <input type="submit" value="Add Task" />
-  </form>
+<!-- <div class="content">
+  <h1>[{{name}}]님, 오늘밤은 이 술과 함께 하지 않으실래요...?</h1>
+  {{sool}}
+</div> -->
+<div class="container">
+  <h1>[{{name}}]님, 오늘밤은 이 술과 함께 하지 않으실래요...?</h1>
+  <div class="card">
+    <div class="row">
+        <div class="col-md-6 text-center align-self-center"> <img class="img-fluid" src="{{sool["image"]}}"> </div>
+        <div class="col-md-6 info">
+            <div class="row title">
+                <div class="col">
+                    <h2>{{sool["name"]}}</h2>
+                </div>
+                <div class="col text-right"><a href="#"><i class="fa fa-heart-o"></i></a></div>
+            </div>
+            <div class="info_sool"> <span>
+                        <div class="row"><big><b>{{sool["proof"]}}</b></big></div>
+                        <div class="row">{{sool["desc"]}}</div></a>
+                    </span>
+                    <span>
+                        <div class="row"><big>
+                          <a href="https://thesool.com/front/find/M000000082/view.do?searchType=2&searchKey=&searchKind=&levelType=&searchString="
+                          onclick="location.href=this.href+'&productId='+'{{sool["num_sool"]}}'+'&(pageIndex=2)&categoryNm=&kind=';return false">
+                          더 알아보기
+                          </a>
+                        </big></div>
+                    </span>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

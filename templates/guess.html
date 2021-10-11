@@ -1,21 +1,25 @@
 {% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
-<div class="content">
-  <h1>[{{name}}]님, 평소 취향이 있다면, 알려주세요</h1>
-  <table>
-    <tr>
-      <td>{{ num }}</td>
-      <td>{{ species }}</td>
-      <td>
-        <a href="">delete</a>
-        <br />
-        <a href="">updete</a>
-        <br />
-      </td>
-    </tr>
-  </table>
-  <form action="/" method="POST">
-    <input type="text" name="content" id="content" />
-    <input type="submit" value="Add Task" />
-  </form>
-</div>
-{% endblock %}
+<h1>[{{name}}]님, 평소 취향과 이 술이 먹고 픈 달을 선택해 주세요</h1>
+<form action="#" method="POST"">
+  주종<br />
+  <input type="checkbox" name="species" value="막걸리" />막걸리
+  <input type="checkbox" name="species" value="주" />주(청주/과실주)
+  <input type="checkbox" name="species" value="와인" />와인
+  <br />
+  달(월)<br />
+  <input type="checkbox" name="month" value="1" />1월
+  <input type="checkbox" name="month" value="2" />2월
+  <input type="checkbox" name="month" value="3" />3월
+  <input type="checkbox" name="month" value="4" />4월
+  <input type="checkbox" name="month" value="5" />5월
+  <input type="checkbox" name="month" value="6" />6월
+  <input type="checkbox" name="month" value="7" />7월
+  <input type="checkbox" name="month" value="8" />8월
+  <input type="checkbox" name="month" value="9" />9월
+  <input type="checkbox" name="month" value="10" />10월
+  <input type="checkbox" name="month" value="11" />11월
+  <input type="checkbox" name="month" value="12" />12월
+  <br />
+  <input type="submit" />
+  {% endblock %}
+</form>
