@@ -1,7 +1,7 @@
 import os
 import sqlite3
 from pymongo import MongoClient
-import crawling
+from js-lib import crawling
 
 #MongoDB information
 HOST = 'cluster0.ddllv.mongodb.net'
