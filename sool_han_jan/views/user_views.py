@@ -7,8 +7,11 @@ from random import randint, choice
 from flask import Blueprint, render_template
 from flask import request, redirect, url_for
 
+from sool_han_jan import DB_FILEPATH
+
 user_bp = Blueprint('user', __name__)
-DB_FILEPATH = os.path.join(os.getcwd(), __name__,'data/Sools.db')
+# DB_FILEPATH = os.path.join(os.getcwd(), __name__, 'data/Sools.db')
+DB_FILEPATH = "sool_han_jan/data/Sools.db";
 connect = sqlite3.connect(DB_FILEPATH, check_same_thread=False)
 cursor = connect.cursor()
 model = joblib.load('project_submit/sools.pkl')
