@@ -12,8 +12,8 @@ def create_app(config=None):
         app.config.update(config)
 
     # import & add blueprint
-    from views.main_views import main_bp
-    from views.user_views import user_bp
+    from project_submit.views.main_views import main_bp
+    from project_submit.views.user_views import user_bp
 
     app.register_blueprint(main_bp);
     app.register_blueprint(user_bp, url_prefix='/<name>/Sools');
