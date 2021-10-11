@@ -2,7 +2,7 @@ import os
 from flask import Flask
 
 # DB 파일 경로
-DB_FILEPATH = os.path.join(os.getcwd(), 'data/Sools.db')
+DB_FILEPATH = os.path.join(os.getcwd(), __name__, 'data/Sools.db')
 # CSV_FILEPATH = os.path.join(os.getcwd(), 'data/my_data.csv')
 
 def create_app(config=None):
