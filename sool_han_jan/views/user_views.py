@@ -14,7 +14,7 @@ user_bp = Blueprint('user', __name__)
 DB_FILEPATH = "sool_han_jan/data/Sools.db";
 connect = sqlite3.connect(DB_FILEPATH, check_same_thread=False)
 cursor = connect.cursor()
-model = joblib.load('project_submit/sools.pkl')
+model = joblib.load('sool_han_jan/sools.pkl')
 
 
 # sqlite(RDB) to list
