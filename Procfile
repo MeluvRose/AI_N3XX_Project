@@ -1,1 +1,1 @@
-web: gunicorn --workers=2 project_submit:app
+web: gunicorn --workers=2 project_submit:create_app
