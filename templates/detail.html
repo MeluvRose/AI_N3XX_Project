@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
+<div class="content">
+  <h1>오늘밤은 이 술과 함께 하지 않을래요...?</h1>
+  <table>
+    <tr>
+      <td>{{ num }}</td>
+      <td>{{ species }}</td>
+      <td>
+        <a href="">delete</a>
+        <br />
+        <a href="">updete</a>
+        <br />
+      </td>
+    </tr>
+  </table>
+  <form action="/" method="POST">
+    <input type="text" name="content" id="content" />
+    <input type="submit" value="Add Task" />
+  </form>
+</div>
+{% endblock %}
