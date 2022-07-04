@@ -57,11 +57,22 @@ def getInfo(num):
     for item in info_list:
         feature = item.find_next("strong").text.strip()
         value = item.find_next("span").text.strip()
+        if feature == "알콜도수":
+            feature = feature + "(%)"
+            value = atof(value)
         dict_info[feature] = value
     return dict_info
+
+def atof(value):
+    value = re.split("[,~?%]", value)[0]
+
+    if value:
+        value = float(value.strip())
+    return value
 
 productNums = list()
 movingPages(productNums, 0)
 sools = movingPages(productNums, 1)
 with open('data/json/sools.json','w') as f:
     json.dump(sools,f)
+browser.quit();
